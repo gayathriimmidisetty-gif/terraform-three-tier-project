@@ -251,7 +251,7 @@ resource "aws_db_instance" "mysql" {
 }
 #EC2 Instance frontend
 resource "aws_instance" "frontend" {
-  ami                    = "ami-0dfb1c86c34509daf" # Amazon Linux 2023 (Singapore)
+  ami                    = "ami-0dfb1c86c34509daf" # Amazon Linux 2 (Singapore)
   instance_type          = "t3.micro"
   subnet_id              = aws_subnet.pub_1.id
   vpc_security_group_ids = [aws_security_group.frontend_sg.id]
